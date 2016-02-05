@@ -23,7 +23,17 @@
                     <div class="panel panel-default">
                         <label class="col-md-4 control-label">Phone Number: </label>{{ Auth::user()->phone }}
                     </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-4">
+                            <button class="btn btn-primary">
+                                <a href="{{ url('/edit') }}">Edit</a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
 
                 <div class="panel-heading">More Info</div>
             </div>
