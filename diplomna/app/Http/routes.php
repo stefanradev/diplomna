@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 
 Route::get('contact', 'HomeController@contact');
+
+Route::get('/edit', 'BodyMeasuresController@index');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -42,6 +44,11 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/profile', function () {
 	    return view('profile');
 	});
- 
+
+	
+	Route::get('/edit', 'BodyMeasuresController@index');
+
+ 	Route::post('edit/add',[
+    'as' => 'addmeasure', 'uses' => 'BodyMeasuresController@add']);
  });
 
